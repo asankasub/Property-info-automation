@@ -1,0 +1,4590 @@
+{
+    "queryState": {
+        "pagination": {},
+        "mapBounds": {
+            "west": -122.56276167822266,
+            "east": -122.30389632177734,
+            "south": 37.69261345230467,
+            "north": 37.857877098316834
+        },
+        "mapZoom": 12,
+        "isMapVisible": true,
+        "filterState": {
+            "price": {
+                "max": 872627
+            },
+            "beds": {
+                "min": 1
+            },
+            "isForSaleForeclosure": {
+                "value": false
+            },
+            "monthlyPayment": {
+                "max": 3000
+            },
+            "isAuction": {
+                "value": false
+            },
+            "isNewConstruction": {
+                "value": false
+            },
+            "isForRent": {
+                "value": true
+            },
+            "isForSaleByOwner": {
+                "value": false
+            },
+            "isComingSoon": {
+                "value": false
+            },
+            "isForSaleByAgent": {
+                "value": false
+            }
+        }
+    },
+    "filterDefinitions": {
+        "keywords": {
+            "id": "keywords",
+            "shortId": "att",
+            "labels": {
+                "default": "Keywords",
+                "tracking": "Keyword"
+            },
+            "sortOrder": 2,
+            "type": "String",
+            "defaultValue": {
+                "value": ""
+            },
+            "exposedPillEnabled": true
+        },
+        "isPublicSchool": {
+            "id": "isPublicSchool",
+            "shortId": "schp",
+            "labels": {
+                "default": "Public"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isCityView": {
+            "id": "isCityView",
+            "shortId": "cityv",
+            "labels": {
+                "default": "City"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isWaterfront": {
+            "id": "isWaterfront",
+            "shortId": "wat",
+            "labels": {
+                "default": "Waterfront"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isCondo": {
+            "id": "isCondo",
+            "shortId": "con",
+            "labels": {
+                "default": "Condos/Co-ops"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "onlyRentalExcludeNullAvailabilityDates": {
+            "id": "onlyRentalExcludeNullAvailabilityDates",
+            "shortId": "enad",
+            "labels": {
+                "default": "Hide listings with no date provided"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            },
+            "exposedPillEnabled": true,
+            "ABTest": {
+                "RE_Move_In_Date_Filter": "TEST"
+            }
+        },
+        "commuteDestination": {
+            "id": "commuteDestination",
+            "shortId": "comDest",
+            "labels": {
+                "default": "Commute Time"
+            },
+            "type": "String",
+            "defaultValue": {
+                "value": ""
+            }
+        },
+        "isMountainView": {
+            "id": "isMountainView",
+            "shortId": "mouv",
+            "labels": {
+                "default": "Mountain"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "singleStory": {
+            "id": "singleStory",
+            "shortId": "sto",
+            "labels": {
+                "default": "Single-story only",
+                "tracking": "Single Story",
+                "valueFormatter": {
+                    "true": "1 story"
+                }
+            },
+            "sortOrder": 8,
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            },
+            "exposedPillEnabled": true
+        },
+        "onlyRentalParkingAvailable": {
+            "id": "onlyRentalParkingAvailable",
+            "shortId": "parka",
+            "labels": {
+                "default": "On-site Parking"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "monthlyPayment": {
+            "id": "monthlyPayment",
+            "shortId": "mp",
+            "labels": {
+                "default": "Price",
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "${{min}}+",
+                    "max": "Up to ${{max}}",
+                    "minMax": "${{min}}-${{max}}",
+                    "identicalMinMax": "${{min}}",
+                    "numberFormatter": "0,0",
+                    "inputFormatter": "0.[0]a"
+                }
+            },
+            "sortOrder": 1,
+            "type": "Range",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "suggestedEnums": [
+                {
+                    "label": "$200",
+                    "value": 200
+                },
+                {
+                    "label": "$400",
+                    "value": 400
+                },
+                {
+                    "label": "$600",
+                    "value": 600
+                },
+                {
+                    "label": "$800",
+                    "value": 800
+                },
+                {
+                    "label": "$1,000",
+                    "value": 1000
+                },
+                {
+                    "label": "$1,200",
+                    "value": 1200
+                },
+                {
+                    "label": "$1,400",
+                    "value": 1400
+                },
+                {
+                    "label": "$1,600",
+                    "value": 1600
+                },
+                {
+                    "label": "$1,800",
+                    "value": 1800
+                },
+                {
+                    "label": "$2,000",
+                    "value": 2000
+                },
+                {
+                    "label": "$2,200",
+                    "value": 2200
+                },
+                {
+                    "label": "$2,400",
+                    "value": 2400
+                },
+                {
+                    "label": "$2,600",
+                    "value": 2600
+                },
+                {
+                    "label": "$2,800",
+                    "value": 2800
+                },
+                {
+                    "label": "$3,000",
+                    "value": 3000
+                },
+                {
+                    "label": "$3,500",
+                    "value": 3500
+                },
+                {
+                    "label": "$4,000",
+                    "value": 4000
+                },
+                {
+                    "label": "$4,500",
+                    "value": 4500
+                },
+                {
+                    "label": "$5,000",
+                    "value": 5000
+                },
+                {
+                    "label": "$5,500",
+                    "value": 5500
+                },
+                {
+                    "label": "$6,000",
+                    "value": 6000
+                },
+                {
+                    "label": "$7,000",
+                    "value": 7000
+                },
+                {
+                    "label": "$8,000",
+                    "value": 8000
+                },
+                {
+                    "label": "$9,000",
+                    "value": 9000
+                },
+                {
+                    "label": "$10,000",
+                    "value": 10000
+                }
+            ],
+            "exposedPillEnabled": false
+        },
+        "price": {
+            "id": "price",
+            "labels": {
+                "default": "Price",
+                "long": "Price Range",
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "${{min}}+",
+                    "max": "Up to ${{max}}",
+                    "minMax": "${{min}}-${{max}}",
+                    "identicalMinMax": "${{min}}",
+                    "numberFormatter": "0,0",
+                    "inputFormatter": "0.[0]a"
+                }
+            },
+            "sortOrder": 1,
+            "type": "Range",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "suggestedEnums": [
+                {
+                    "label": "$100,000",
+                    "value": 100000
+                },
+                {
+                    "label": "$200,000",
+                    "value": 200000
+                },
+                {
+                    "label": "$300,000",
+                    "value": 300000
+                },
+                {
+                    "label": "$400,000",
+                    "value": 400000
+                },
+                {
+                    "label": "$500,000",
+                    "value": 500000
+                },
+                {
+                    "label": "$600,000",
+                    "value": 600000
+                },
+                {
+                    "label": "$700,000",
+                    "value": 700000
+                },
+                {
+                    "label": "$800,000",
+                    "value": 800000
+                },
+                {
+                    "label": "$900,000",
+                    "value": 900000
+                },
+                {
+                    "label": "$1M",
+                    "value": 1000000
+                },
+                {
+                    "label": "$1.25M",
+                    "value": 1250000
+                },
+                {
+                    "label": "$1.5M",
+                    "value": 1500000
+                },
+                {
+                    "label": "$1.75M",
+                    "value": 1750000
+                },
+                {
+                    "label": "$2M",
+                    "value": 2000000
+                },
+                {
+                    "label": "$2.25M",
+                    "value": 2250000
+                },
+                {
+                    "label": "$2.5M",
+                    "value": 2500000
+                },
+                {
+                    "label": "$2.75M",
+                    "value": 2750000
+                },
+                {
+                    "label": "$3M",
+                    "value": 3000000
+                },
+                {
+                    "label": "$4M",
+                    "value": 4000000
+                },
+                {
+                    "label": "$5M",
+                    "value": 5000000
+                },
+                {
+                    "label": "$6M",
+                    "value": 6000000
+                },
+                {
+                    "label": "$7M",
+                    "value": 7000000
+                },
+                {
+                    "label": "$8M",
+                    "value": 8000000
+                },
+                {
+                    "label": "$9M",
+                    "value": 9000000
+                },
+                {
+                    "label": "$10M",
+                    "value": 10000000
+                }
+            ],
+            "exposedPillEnabled": false
+        },
+        "onlyPriceReduction": {
+            "id": "onlyPriceReduction",
+            "labels": {
+                "default": "Price Reduction"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "onlyRentalAcceptsApplications": {
+            "id": "onlyRentalAcceptsApplications",
+            "shortId": "app",
+            "labels": {
+                "default": "Accepts Zillow Applications"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "SEOTypedIdField": {
+            "id": "SEOTypedIdField",
+            "shortId": "seo",
+            "labels": {
+                "default": "SEO"
+            },
+            "defaultValue": {
+                "value": null,
+                "field": null,
+                "id": null
+            }
+        },
+        "sqft": {
+            "id": "sqft",
+            "labels": {
+                "default": "Square Feet",
+                "short": "Sqft",
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "{{min}}+",
+                    "max": "<{{max}}",
+                    "minMax": "{{min}}-{{max}}",
+                    "identicalMinMax": "{{min}}",
+                    "numberFormatter": "0,0",
+                    "inputFormatter": "0,0"
+                }
+            },
+            "sortOrder": 4,
+            "type": "Range",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "suggestedEnums": [
+                {
+                    "label": "500",
+                    "value": 500
+                },
+                {
+                    "label": "750",
+                    "value": 750
+                },
+                {
+                    "label": "1,000",
+                    "value": 1000
+                },
+                {
+                    "label": "1,250",
+                    "value": 1250
+                },
+                {
+                    "label": "1,500",
+                    "value": 1500
+                },
+                {
+                    "label": "1,750",
+                    "value": 1750
+                },
+                {
+                    "label": "2,000",
+                    "value": 2000
+                },
+                {
+                    "label": "2,250",
+                    "value": 2250
+                },
+                {
+                    "label": "2,500",
+                    "value": 2500
+                },
+                {
+                    "label": "2,750",
+                    "value": 2750
+                },
+                {
+                    "label": "3,000",
+                    "value": 3000
+                },
+                {
+                    "label": "3,500",
+                    "value": 3500
+                },
+                {
+                    "label": "4,000",
+                    "value": 4000
+                },
+                {
+                    "label": "5,000",
+                    "value": 5000
+                },
+                {
+                    "label": "7,500",
+                    "value": 7500
+                }
+            ],
+            "exposedPillEnabled": true,
+            "ABTest": {
+                "SXP_VISUAL_AUDIT_2021": "CONTROL"
+            }
+        },
+        "isZillowOwnedOnly": {
+            "id": "isZillowOwnedOnly",
+            "shortId": "zo",
+            "labels": {
+                "default": "",
+                "tracking": "Zillow Owned"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isForRent": {
+            "id": "isForRent",
+            "shortId": "fr",
+            "labels": {
+                "default": "For Rent"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "onlyRentalRequestedAvailabilityDate": {
+            "id": "onlyRentalRequestedAvailabilityDate",
+            "shortId": "rad",
+            "labels": {
+                "default": "Move-in Date"
+            },
+            "type": "String",
+            "defaultValue": {
+                "value": ""
+            },
+            "exposedPillEnabled": true,
+            "ABTest": {
+                "RE_Move_In_Date_Filter": "TEST"
+            }
+        },
+        "isForSaleByOwner": {
+            "id": "isForSaleByOwner",
+            "shortId": "fsbo",
+            "labels": {
+                "default": "By Owner"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "hasAirConditioning": {
+            "id": "hasAirConditioning",
+            "shortId": "ac",
+            "labels": {
+                "default": "Must have A/C",
+                "tracking": "AC"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isApartment": {
+            "id": "isApartment",
+            "shortId": "apa",
+            "labels": {
+                "default": "Apartments"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "sortSelection": {
+            "id": "sortSelection",
+            "shortId": "sort",
+            "labels": {
+                "default": "Sort",
+                "valueFormatter": {
+                    "saved": "Date Saved",
+                    "listingstatus": "Listing Status",
+                    "mostrecentchange": "Most Recent Change",
+                    "globalrelevanceex": "Homes for You",
+                    "featured": "Verified Source",
+                    "priced": "Price (High to Low)",
+                    "pricea": "Price (Low to High)",
+                    "paymentd": "Payment (High to Low)",
+                    "paymenta": "Payment (Low to High)",
+                    "days": "Newest",
+                    "beds": "Bedrooms",
+                    "baths": "Bathrooms",
+                    "size": "Square Feet",
+                    "lot": "Lot Size",
+                    "zest": "Zestimate (High to Low)",
+                    "zesta": "Zestimate (Low to High)",
+                    "priorityscore": "Default"
+                }
+            },
+            "type": "Enum",
+            "defaultValue": {
+                "value": "priorityscore"
+            },
+            "allowedValues": {
+                "saved": "saved",
+                "listingstatus": "listingstatus",
+                "mostrecentchange": "mostrecentchange",
+                "globalrelevanceex": "globalrelevanceex",
+                "featured": "featured",
+                "priced": "priced",
+                "pricea": "pricea",
+                "paymentd": "paymentd",
+                "paymenta": "paymenta",
+                "days": "days",
+                "beds": "beds",
+                "baths": "baths",
+                "size": "size",
+                "lot": "lot",
+                "zest": "zest",
+                "zesta": "zesta",
+                "priorityscore": "priorityscore"
+            },
+            "ABTest": {
+                "RE_JanusBrainSort": "TEST_ALL_STATES"
+            }
+        },
+        "isMiddleSchool": {
+            "id": "isMiddleSchool",
+            "shortId": "schm",
+            "labels": {
+                "default": "Middle"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isWaterView": {
+            "id": "isWaterView",
+            "shortId": "watv",
+            "labels": {
+                "default": "Water"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isPrivateSchool": {
+            "id": "isPrivateSchool",
+            "shortId": "schr",
+            "labels": {
+                "default": "Private"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "onlyRentalIncomeRestricted": {
+            "id": "onlyRentalIncomeRestricted",
+            "shortId": "inc",
+            "labels": {
+                "default": "Income restricted"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isManufactured": {
+            "id": "isManufactured",
+            "shortId": "manu",
+            "labels": {
+                "default": "Manufactured"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "onlyRentalInUnitLaundry": {
+            "id": "onlyRentalInUnitLaundry",
+            "shortId": "lau",
+            "labels": {
+                "default": "In-unit Laundry"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isComingSoon": {
+            "id": "isComingSoon",
+            "shortId": "cmsn",
+            "labels": {
+                "default": "Coming Soon"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "isSingleFamily": {
+            "id": "isSingleFamily",
+            "shortId": "sf",
+            "labels": {
+                "default": "Houses"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isForSaleForeclosure": {
+            "id": "isForSaleForeclosure",
+            "shortId": "fore",
+            "labels": {
+                "default": "Foreclosures"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "commuteTimeOfDay": {
+            "id": "commuteTimeOfDay",
+            "shortId": "comTime",
+            "labels": {
+                "default": "Time of Day"
+            },
+            "type": "Enum",
+            "defaultValue": {
+                "value": "Now"
+            },
+            "allowedValues": {
+                "Now": "now",
+                "Rush hour": "rushHour",
+                "Off-peak": "offPeak"
+            }
+        },
+        "isHighSchool": {
+            "id": "isHighSchool",
+            "shortId": "schh",
+            "labels": {
+                "default": "High"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "onlyWithPhotos": {
+            "id": "onlyWithPhotos",
+            "labels": {
+                "default": "Photos"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "hoa": {
+            "id": "hoa",
+            "labels": {
+                "default": "Max HOA",
+                "valueFormatter": {
+                    "none": "Any",
+                    "max": "${{max}}/month"
+                }
+            },
+            "sortOrder": 9,
+            "type": "Range",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "suggestedEnums": {
+                "Any": null,
+                "No HOA Fee": 0,
+                "$50/month": 50,
+                "$100/month": 100,
+                "$200/month": 200,
+                "$300/month": 300,
+                "$400/month": 400,
+                "$500/month": 500,
+                "$600/month": 600,
+                "$700/month": 700,
+                "$800/month": 800,
+                "$900/month": 900,
+                "$1000/month": 1000
+            },
+            "exposedPillEnabled": true
+        },
+        "beds": {
+            "id": "beds",
+            "labels": {
+                "default": "Beds",
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "{{min}}+",
+                    "max": "<{{max}}",
+                    "minMax": "{{min}}-{{max}}",
+                    "identicalMinMax": {
+                        "0": "Studio",
+                        "default": "{{min}}"
+                    }
+                }
+            },
+            "sortOrder": 1,
+            "type": "Range",
+            "subType": "ExactableMin",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "suggestedEnums": {
+                "default": [
+                    {
+                        "key": "Any",
+                        "value": 0
+                    },
+                    {
+                        "key": "1+",
+                        "value": 1
+                    },
+                    {
+                        "key": "2+",
+                        "value": 2
+                    },
+                    {
+                        "key": "3+",
+                        "value": 3
+                    },
+                    {
+                        "key": "4+",
+                        "value": 4
+                    },
+                    {
+                        "key": "5+",
+                        "value": 5
+                    }
+                ],
+                "exact": [
+                    {
+                        "key": "Studio",
+                        "value": 0
+                    },
+                    {
+                        "key": "1",
+                        "value": 1
+                    },
+                    {
+                        "key": "2",
+                        "value": 2
+                    },
+                    {
+                        "key": "3",
+                        "value": 3
+                    },
+                    {
+                        "key": "4",
+                        "value": 4
+                    },
+                    {
+                        "key": "5",
+                        "value": 5
+                    }
+                ]
+            },
+            "exposedPillEnabled": false
+        },
+        "isAllHomes": {
+            "id": "isAllHomes",
+            "shortId": "ah",
+            "labels": {
+                "default": "Off Market"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "ageRestricted55Plus": {
+            "id": "ageRestricted55Plus",
+            "shortId": "55plus",
+            "labels": {
+                "default": "Hide 55+ communities"
+            },
+            "type": "Enum",
+            "defaultValue": {
+                "value": "i"
+            },
+            "allowedValues": {
+                "i": "Include 55+ communities",
+                "e": "Exclude 55+ communities",
+                "o": "Show only 55+ communities"
+            }
+        },
+        "onlyRentalCatsAllowed": {
+            "id": "onlyRentalCatsAllowed",
+            "shortId": "cat",
+            "labels": {
+                "default": "Allows cats"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "includeSchoolsSelection": {
+            "id": "includeSchoolsSelection",
+            "labels": {
+                "default": "Include",
+                "valueFormatter": {
+                    "highSchool": "high schools",
+                    "middleSchool": "middle schools",
+                    "elementarySchool": "elementary schools"
+                }
+            },
+            "type": "String",
+            "defaultValue": {
+                "highSchool": null,
+                "middleSchool": null,
+                "elementarySchool": null
+            }
+        },
+        "isCharterSchool": {
+            "id": "isCharterSchool",
+            "shortId": "schc",
+            "labels": {
+                "default": "Charter"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "onlyRentalPetsAllowed": {
+            "id": "onlyRentalPetsAllowed",
+            "shortId": "pet",
+            "labels": {
+                "default": "Pets Allowed"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isAuction": {
+            "id": "isAuction",
+            "shortId": "auc",
+            "labels": {
+                "default": "Auction"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "is3dHome": {
+            "id": "is3dHome",
+            "shortId": "3d",
+            "labels": {
+                "default": "Must have 3D Tour",
+                "tracking": "3D Home"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            },
+            "ABTest": {
+                "RMX_3RD_PARTY_P1": "ON"
+            }
+        },
+        "isMultiFamily": {
+            "id": "isMultiFamily",
+            "shortId": "mf",
+            "labels": {
+                "default": "Multi-family"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "doz": {
+            "id": "doz",
+            "labels": {
+                "default": "Days on Zillow",
+                "soldInLast": "Sold in last",
+                "both": "Listed or Sold in last",
+                "valueFormatter": {
+                    "any": "Any",
+                    "1": "1 day",
+                    "7": "7 days",
+                    "14": "14 days",
+                    "30": "30 days",
+                    "90": "90 days",
+                    "6m": "6 months",
+                    "12m": "12 months",
+                    "24m": "24 months",
+                    "36m": "36 months"
+                }
+            },
+            "sortOrder": 7,
+            "type": "Enum",
+            "defaultValue": {
+                "value": "any"
+            },
+            "allowedValues": {
+                "any": null,
+                "1": -1,
+                "7": -7,
+                "14": -14,
+                "30": -30,
+                "90": -90,
+                "6m": -182,
+                "12m": -365,
+                "24m": -730,
+                "36m": -1095
+            },
+            "suggestedEnums": {
+                "Any": "any",
+                "1 day": "1",
+                "7 days": "7",
+                "14 days": "14",
+                "30 days": "30",
+                "90 days": "90",
+                "6 months": "6m",
+                "12 months": "12m",
+                "24 months": "24m",
+                "36 months": "36m"
+            },
+            "exposedPillEnabled": true
+        },
+        "isNewConstruction": {
+            "id": "isNewConstruction",
+            "shortId": "nc",
+            "labels": {
+                "default": "New Construction"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "isTownhouse": {
+            "id": "isTownhouse",
+            "shortId": "tow",
+            "labels": {
+                "default": "Townhomes"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isLotLand": {
+            "id": "isLotLand",
+            "shortId": "land",
+            "labels": {
+                "default": "Lots/Land"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isBasementUnfinished": {
+            "id": "isBasementUnfinished",
+            "shortId": "basu",
+            "labels": {
+                "default": "Unfinished"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isOpenHousesOnly": {
+            "id": "isOpenHousesOnly",
+            "shortId": "open",
+            "labels": {
+                "default": "Must have open house",
+                "tracking": "Open House"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isBasementFinished": {
+            "id": "isBasementFinished",
+            "shortId": "basf",
+            "labels": {
+                "default": "Finished"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "dataSourceSelection": {
+            "id": "dataSourceSelection",
+            "shortId": "dsrc",
+            "labels": {
+                "default": "Data Source"
+            },
+            "type": "String",
+            "defaultValue": {
+                "value": "all"
+            }
+        },
+        "isPreMarketForeclosure": {
+            "id": "isPreMarketForeclosure",
+            "shortId": "pmf",
+            "labels": {
+                "default": "Foreclosed"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isForSaleByAgent": {
+            "id": "isForSaleByAgent",
+            "shortId": "fsba",
+            "labels": {
+                "default": "By Agent"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "parkingSpots": {
+            "id": "parkingSpots",
+            "shortId": "parks",
+            "type": "Range",
+            "labels": {
+                "default": "Parking spots"
+            },
+            "defaultValue": {
+                "min": null
+            },
+            "suggestedEnums": {
+                "Any": null,
+                "1+": 1,
+                "2+": 2,
+                "3+": 3,
+                "4+": 4
+            }
+        },
+        "isPreMarketPreForeclosure": {
+            "id": "isPreMarketPreForeclosure",
+            "shortId": "pf",
+            "labels": {
+                "default": "Pre-Foreclosures"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "commuteMaxTime": {
+            "id": "commuteMaxTime",
+            "shortId": "comMax",
+            "labels": {
+                "default": "Max. Travel Time"
+            },
+            "type": "Enum",
+            "defaultValue": {
+                "value": null
+            },
+            "allowedValues": {
+                "Any": null,
+                "60min": 60,
+                "45min": 45,
+                "30min": 30,
+                "15min": 15
+            }
+        },
+        "hasGarage": {
+            "id": "hasGarage",
+            "shortId": "gar",
+            "labels": {
+                "default": "Must have garage",
+                "tracking": "Garage"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "hasPool": {
+            "id": "hasPool",
+            "shortId": "pool",
+            "labels": {
+                "default": "Must have pool",
+                "tracking": "Pool"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "onlyRentalSmallDogsAllowed": {
+            "id": "onlyRentalSmallDogsAllowed",
+            "shortId": "sdog",
+            "labels": {
+                "default": "Allows small dogs"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isAcceptingBackupOffersSelected": {
+            "id": "isAcceptingBackupOffersSelected",
+            "shortId": "abo",
+            "labels": {
+                "default": "Accepting Backup Offers"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "built": {
+            "id": "built",
+            "labels": {
+                "default": "Year Built",
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "{{min}}+",
+                    "max": "<{{max}}",
+                    "minMax": "{{min}}-{{max}}",
+                    "identicalMinMax": "{{min}}",
+                    "numberFormatter": "0",
+                    "inputFormatter": "0"
+                }
+            },
+            "sortOrder": 6,
+            "type": "Range",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "exposedPillEnabled": true,
+            "ABTest": {
+                "SXP_VISUAL_AUDIT_2021": "CONTROL"
+            }
+        },
+        "onlyRentalLargeDogsAllowed": {
+            "id": "onlyRentalLargeDogsAllowed",
+            "shortId": "ldog",
+            "labels": {
+                "default": "Allows large dogs"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "lotSize": {
+            "id": "lotSize",
+            "shortId": "lot",
+            "labels": {
+                "default": "Lot Size",
+                "shortDescription": "...",
+                "longDescription": "...",
+                "pluralSubstitutes": {
+                    "acre": "acres"
+                },
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "{{min}}+ {{unit}}",
+                    "max": "<={{max}} {{unit}}",
+                    "minMax": "{{min}}-{{max}} {{unit}}",
+                    "identicalMinMax": "{{min}} {{unit}}",
+                    "numberFormatter": "0,0[.][000]",
+                    "inputFormatter": "0,0[.][000]"
+                }
+            },
+            "sortOrder": 5,
+            "type": "Range",
+            "subType": "RangeWithUnits",
+            "defaultValue": {
+                "min": null,
+                "max": null,
+                "units": "sqft"
+            },
+            "unitTypes": [
+                "sqft",
+                "acre"
+            ],
+            "suggestedEnums": [
+                {
+                    "label": "1,000 sqft",
+                    "value": 1000,
+                    "units": "sqft"
+                },
+                {
+                    "label": "2,000 sqft",
+                    "value": 2000,
+                    "units": "sqft"
+                },
+                {
+                    "label": "3,000 sqft",
+                    "value": 3000,
+                    "units": "sqft"
+                },
+                {
+                    "label": "4,000 sqft",
+                    "value": 4000,
+                    "units": "sqft"
+                },
+                {
+                    "label": "5,000 sqft",
+                    "value": 5000,
+                    "units": "sqft"
+                },
+                {
+                    "label": "7,500 sqft",
+                    "value": 7500,
+                    "units": "sqft"
+                },
+                {
+                    "label": "1/4 acre/10,890 sqft",
+                    "value": 10890,
+                    "units": "sqft"
+                },
+                {
+                    "label": "1/2 acre",
+                    "value": 21780,
+                    "units": "sqft"
+                },
+                {
+                    "label": "1 acre",
+                    "value": 43560,
+                    "units": "sqft"
+                },
+                {
+                    "label": "2 acres",
+                    "value": 87120,
+                    "units": "sqft"
+                },
+                {
+                    "label": "5 acres",
+                    "value": 217800,
+                    "units": "sqft"
+                },
+                {
+                    "label": "10 acres",
+                    "value": 435600,
+                    "units": "sqft"
+                },
+                {
+                    "label": "20 acres",
+                    "value": 871200,
+                    "units": "sqft"
+                },
+                {
+                    "label": "50 acres",
+                    "value": 2178000,
+                    "units": "sqft"
+                },
+                {
+                    "label": "100 acres",
+                    "value": 4356000,
+                    "units": "sqft"
+                }
+            ],
+            "exposedPillEnabled": true,
+            "ABTest": {
+                "SXP_VISUAL_AUDIT_2021": "CONTROL"
+            }
+        },
+        "greatSchoolsRating": {
+            "id": "greatSchoolsRating",
+            "shortId": "schb",
+            "labels": {
+                "default": "GreatSchools Rating",
+                "valueFormatter": {
+                    "none": "Any"
+                }
+            },
+            "type": "Range",
+            "defaultValue": {
+                "min": 1
+            },
+            "suggestedEnums": [
+                {
+                    "label": "1+",
+                    "value": 1
+                },
+                {
+                    "label": "2+",
+                    "value": 2
+                },
+                {
+                    "label": "3+",
+                    "value": 3
+                },
+                {
+                    "label": "4+",
+                    "value": 4
+                },
+                {
+                    "label": "5+",
+                    "value": 5
+                },
+                {
+                    "label": "6+",
+                    "value": 6
+                },
+                {
+                    "label": "7+",
+                    "value": 7
+                },
+                {
+                    "label": "8+",
+                    "value": 8
+                },
+                {
+                    "label": "9+",
+                    "value": 9
+                },
+                {
+                    "label": "10",
+                    "value": 10
+                }
+            ]
+        },
+        "includeUnratedSchools": {
+            "id": "includeUnratedSchools",
+            "shortId": "schu",
+            "labels": {
+                "default": "Include schools with no rating"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isRecentlySold": {
+            "id": "isRecentlySold",
+            "shortId": "rs",
+            "labels": {
+                "default": "Sold",
+                "long": "Recently Sold"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "isPendingListingsSelected": {
+            "id": "isPendingListingsSelected",
+            "shortId": "pnd",
+            "labels": {
+                "default": "Pending & Under Contract"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            },
+            "ABTest": {
+                "SXP_NO_SRPTOGGLE": "CONTROL"
+            }
+        },
+        "onlyRentalHousingConnector": {
+            "id": "onlyRentalHousingConnector",
+            "shortId": "hc",
+            "labels": {
+                "default": "Accepts Housing Connector",
+                "tracking": "Housing Connector"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "onlyRentalFeaturedMultiFamilyBuilding": {
+            "id": "onlyRentalFeaturedMultiFamilyBuilding",
+            "shortId": "fmfb",
+            "labels": {
+                "default": "Apartment Community"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "baths": {
+            "id": "baths",
+            "labels": {
+                "default": "Bathrooms",
+                "valueFormatter": {
+                    "none": "Any",
+                    "min": "{{min}}+",
+                    "max": "<{{max}}",
+                    "minMax": "{{min}}-{{max}}",
+                    "identicalMinMax": "{{min}}"
+                }
+            },
+            "sortOrder": 3,
+            "type": "Range",
+            "defaultValue": {
+                "min": null,
+                "max": null
+            },
+            "suggestedEnums": {
+                "Any": 0,
+                "1+": 1,
+                "1.5+": 1.5,
+                "2+": 2,
+                "3+": 3,
+                "4+": 4
+            },
+            "exposedPillEnabled": true
+        },
+        "isApartmentOrCondo": {
+            "id": "isApartmentOrCondo",
+            "shortId": "apco",
+            "labels": {
+                "default": "Apartments/Condos/Co-ops"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "includeHomesWithNoHoaData": {
+            "id": "includeHomesWithNoHoaData",
+            "shortId": "nohoa",
+            "labels": {
+                "default": "Include homes with incomplete HOA data",
+                "tracking": "HOA No Data"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isElementarySchool": {
+            "id": "isElementarySchool",
+            "shortId": "sche",
+            "labels": {
+                "default": "Elementary"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": true
+            }
+        },
+        "isParkView": {
+            "id": "isParkView",
+            "shortId": "parkv",
+            "labels": {
+                "default": "Park"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value": false
+            }
+        },
+        "commuteMode": {
+            "id": "commuteMode",
+            "shortId": "comMode",
+            "labels": {
+                "default": "Travel Mode"
+            },
+            "type": "Enum",
+            "defaultValue": {
+                "value": "By car"
+            },
+            "allowedValues": {
+                "By car": "driving",
+                "By transit": "transit",
+                "Walking distance": "walking",
+                "By bicycle": "biking"
+            }
+        },
+        "enableSchools": {
+            "id": "enableSchools",
+            "shortId": "sch",
+            "labels": {
+                "default": "Schools"
+            },
+            "type": "Boolean",
+            "defaultValue": {
+                "value:": false
+            }
+        }
+    },
+    "defaultFilterState": {
+        "keywords": {
+            "value": ""
+        },
+        "isPublicSchool": {
+            "value": true
+        },
+        "isCityView": {
+            "value": false
+        },
+        "isWaterfront": {
+            "value": false
+        },
+        "isCondo": {
+            "value": true
+        },
+        "onlyRentalExcludeNullAvailabilityDates": {
+            "value": false
+        },
+        "commuteDestination": {
+            "value": ""
+        },
+        "isMountainView": {
+            "value": false
+        },
+        "singleStory": {
+            "value": false
+        },
+        "onlyRentalParkingAvailable": {
+            "value": false
+        },
+        "monthlyPayment": {
+            "min": null,
+            "max": null
+        },
+        "price": {
+            "min": null,
+            "max": null
+        },
+        "onlyPriceReduction": {
+            "value": false
+        },
+        "onlyRentalAcceptsApplications": {
+            "value": false
+        },
+        "SEOTypedIdField": {
+            "value": null,
+            "field": null,
+            "id": null
+        },
+        "sqft": {
+            "min": null,
+            "max": null
+        },
+        "isZillowOwnedOnly": {
+            "value": false
+        },
+        "isForRent": {
+            "value": false
+        },
+        "onlyRentalRequestedAvailabilityDate": {
+            "value": ""
+        },
+        "isForSaleByOwner": {
+            "value": true
+        },
+        "hasAirConditioning": {
+            "value": false
+        },
+        "isApartment": {
+            "value": true
+        },
+        "sortSelection": {
+            "value": "priorityscore"
+        },
+        "isMiddleSchool": {
+            "value": true
+        },
+        "isWaterView": {
+            "value": false
+        },
+        "isPrivateSchool": {
+            "value": true
+        },
+        "onlyRentalIncomeRestricted": {
+            "value": false
+        },
+        "isManufactured": {
+            "value": true
+        },
+        "onlyRentalInUnitLaundry": {
+            "value": false
+        },
+        "isComingSoon": {
+            "value": true
+        },
+        "isSingleFamily": {
+            "value": true
+        },
+        "isForSaleForeclosure": {
+            "value": true
+        },
+        "commuteTimeOfDay": {
+            "value": "Now"
+        },
+        "isHighSchool": {
+            "value": true
+        },
+        "onlyWithPhotos": {
+            "value": false
+        },
+        "hoa": {
+            "min": null,
+            "max": null
+        },
+        "beds": {
+            "min": null,
+            "max": null
+        },
+        "isAllHomes": {
+            "value": false
+        },
+        "ageRestricted55Plus": {
+            "value": "i"
+        },
+        "onlyRentalCatsAllowed": {
+            "value": false
+        },
+        "includeSchoolsSelection": {
+            "highSchool": null,
+            "middleSchool": null,
+            "elementarySchool": null
+        },
+        "isCharterSchool": {
+            "value": true
+        },
+        "onlyRentalPetsAllowed": {
+            "value": false
+        },
+        "isAuction": {
+            "value": true
+        },
+        "is3dHome": {
+            "value": false
+        },
+        "isMultiFamily": {
+            "value": true
+        },
+        "doz": {
+            "value": "any"
+        },
+        "isNewConstruction": {
+            "value": true
+        },
+        "isTownhouse": {
+            "value": true
+        },
+        "isLotLand": {
+            "value": true
+        },
+        "isBasementUnfinished": {
+            "value": false
+        },
+        "isOpenHousesOnly": {
+            "value": false
+        },
+        "isBasementFinished": {
+            "value": false
+        },
+        "dataSourceSelection": {
+            "value": "all"
+        },
+        "isPreMarketForeclosure": {
+            "value": false
+        },
+        "isForSaleByAgent": {
+            "value": true
+        },
+        "parkingSpots": {
+            "min": null
+        },
+        "isPreMarketPreForeclosure": {
+            "value": false
+        },
+        "commuteMaxTime": {
+            "value": null
+        },
+        "hasGarage": {
+            "value": false
+        },
+        "hasPool": {
+            "value": false
+        },
+        "onlyRentalSmallDogsAllowed": {
+            "value": false
+        },
+        "isAcceptingBackupOffersSelected": {
+            "value": false
+        },
+        "built": {
+            "min": null,
+            "max": null
+        },
+        "onlyRentalLargeDogsAllowed": {
+            "value": false
+        },
+        "lotSize": {
+            "min": null,
+            "max": null,
+            "units": "sqft"
+        },
+        "greatSchoolsRating": {
+            "min": 1
+        },
+        "includeUnratedSchools": {
+            "value": true
+        },
+        "isRecentlySold": {
+            "value": false
+        },
+        "isPendingListingsSelected": {
+            "value": false
+        },
+        "onlyRentalHousingConnector": {
+            "value": false
+        },
+        "onlyRentalFeaturedMultiFamilyBuilding": {
+            "value": false
+        },
+        "baths": {
+            "min": null,
+            "max": null
+        },
+        "isApartmentOrCondo": {
+            "value": true
+        },
+        "includeHomesWithNoHoaData": {
+            "value": true
+        },
+        "isElementarySchool": {
+            "value": true
+        },
+        "isParkView": {
+            "value": false
+        },
+        "commuteMode": {
+            "value": "By car"
+        },
+        "enableSchools": {
+            "value:": false
+        }
+    },
+    "defaultQueryState": {
+        "filterState": {},
+        "dataSource": "core",
+        "isMapVisible": false,
+        "isListVisible": true,
+        "mapBounds": {
+            "west": 0,
+            "south": 0,
+            "east": 0,
+            "north": 0,
+            "zoom": 10
+        },
+        "mapZoom": 10,
+        "pagination": {
+            "currentPage": 1
+        },
+        "usersSearchTerm": null,
+        "regionSelection": null,
+        "schoolId": null,
+        "districtId": null,
+        "customRegionId": null,
+        "savedSearchEnrollmentId": null,
+        "nearMe": null,
+        "category": "cat1",
+        "debugRequest": {},
+        "commuteLat": null,
+        "commuteLng": null
+    },
+    "searchPageConstants": {
+        "monthlyInterestRate": 0.0053183334,
+        "isMobile": false,
+        "isTablet": false,
+        "searchMapGoogleAPIKey": "AIzaSyA1uIgJLlFocMlwcu8b3wKPKkdT2mWV3AU",
+        "mapComboUrl": "https://www.zillowstatic.com",
+        "debugEnabled": false,
+        "keystoneTargetUrl": "https://e.zg-api.com/event",
+        "categoryOneTitle": "Agent listings",
+        "categoryTwoTitle": "Other listings",
+        "gtm": {
+            "gtmInitialData": [
+                {
+                    "isTablet": false,
+                    "isPhone": false,
+                    "isMobile": false,
+                    "isMobileApp": false
+                },
+                {
+                    "event": "SearchPageView",
+                    "gaCustomDimensions": {
+                        "dimension3": "",
+                        "dimension4": "",
+                        "dimension5": "",
+                        "dimension6": "",
+                        "dimension18": "",
+                        "dimension23": "ForRent",
+                        "dimension66": "Search"
+                    }
+                }
+            ],
+            "gtmContainerID": "GTM-P6HT97",
+            "isGtmEnabled": true
+        }
+    },
+    "user": {
+        "isLoggedIn": false,
+        "hasHousingConnectorPermission": false,
+        "savedSearchCount": 0,
+        "savedHomesCount": 0,
+        "personalizedSearchGaDataTag": null,
+        "personalizedSearchTraceID": "633552259e0ed7a722520bb100f07c5e",
+        "searchPageRenderedCount": 1,
+        "guid": "07fa6652-a667-4101-8462-2eb9fb896d8d",
+        "zuid": "",
+        "isBot": false,
+        "userSpecializedSEORegion": false
+    },
+    "seoFooter": {
+        "regionName": "",
+        "rentalBuildingSearch": false,
+        "condoBuildingsSearch": false,
+        "rentalApartmentSearch": false,
+        "studioApartmentsSearch": false,
+        "furnishedApartmentsSearch": false,
+        "cheapApartmentsSearch": false,
+        "schoolLayerEnabled": true,
+        "showSimilarApartmentsSection": false,
+        "showNearMeRentalFooterLinks": false,
+        "showNearMeForSaleFooterLinks": false,
+        "isApartmentRental": false,
+        "baseUrl": "https://www.zillow.com",
+        "breadcrumbsCategory": "For Rent",
+        "breadcrumbs": [],
+        "regionNamePlusStateAbbv": "",
+        "rentalPage": true,
+        "rentalPageDetails": {
+            "regionName": "",
+            "regionTypeIsValid": false,
+            "petFriendlyURL": "/homes/for_rent/1_large-dogs/1_small-dogs/1_cats/",
+            "rentAffordabilityCalculatorURL": "https://www.zillow.com/rent-affordability-calculator/",
+            "rentalPage": true,
+            "rentalsAppURL": "https://www.zillow.com/mobile/rentals/"
+        },
+        "searchBreadcrumbData": {
+            "isSearchBreadcrumbData": true,
+            "regionName": "",
+            "isRentalApartmentOrHouses": false,
+            "isCanadian": false,
+            "currentRegion": {},
+            "isValidZhvi": false,
+            "showFooterMoreLinks": true,
+            "breadcrumbListDetails": {
+                "boroughs": null,
+                "cities": null,
+                "neighborhoods": null,
+                "zipcodes": null,
+                "universities": null
+            },
+            "showAttributeLinks": null
+        }
+    },
+    "mapState": {
+        "customRegionPolygonWkt": null,
+        "schoolPolygonWkt": null,
+        "isCurrentLocationSearch": false,
+        "userPosition": {
+            "lat": null,
+            "lon": null
+        }
+    },
+    "regionState": {
+        "regionInfo": []
+    },
+    "searchPageSeoObject": {
+        "baseUrl": "/homes/for_rent/",
+        "windowTitle": "Rental Listings - 557 Rentals | Zillow",
+        "metaDescription": "This is a list of all of the rental listings. Don't forget to use the filters and set up a saved search."
+    },
+    "abTrials": {
+        "SXP_HDP_CONTINGENT_V2": "ON",
+        "SXP_REGION_AUTOCOMPLETE_SOURCE": "TRULIA",
+        "RE_Move_In_Date_Filter": "TEST",
+        "SXP_SENTRY": "ON",
+        "SEOTEST__SXP_LIST_ONLY_SRP": "CONTROL",
+        "SXP_SAVE_SEARCH_COLOR": "CONTROL",
+        "SXP_REACT_FOOTER_DESKTOP": "CONTROL",
+        "ACQ_Search_Filters_Upsell": "CONTROL",
+        "VARIANTS_BDP_768_PLUS": "CONTROL",
+        "SXP_FLOATING_ACTION_BAR": "ON",
+        "SET_CTA_COUNTLESS": "CONTROL",
+        "SXP_LISTING_SUBTYPE": "CONTROL",
+        "SXP_Search_Refinement_Filters": "CONTROL",
+        "SXP_PREXIT_CLAIMS_INFO": "ENABLED",
+        "SXP_NONMLS_OFF": "CONTROL",
+        "SXP_PARTIAL_PAGE_LOAD_REFACTOR": "CONTROL",
+        "SXP_NAV_AD_LOADING": "CONTROL",
+        "ACT_FILTER_ON_LAND": "CONTROL",
+        "SXP_PHOTO_CAROUSEL": "CONTROL",
+        "SEO__SXP_REMOVE_ANCHOR_TEXT": "CONTROL",
+        "DXP_NEW_MAP_DOTS_WEB": "CONTROL",
+        "SXP_ACT_REMOVE_SEARCHBOX_GLEAM": "NO_GLEAM",
+        "SXP_Exclude_Referer": "TEST",
+        "SXP_PAGE_LOAD": "FASTER",
+        "RE_Rentals_Badging_v1": "CONTROL",
+        "SXP_55PLUS_FILTER": "ON",
+        "SXP_REACT_GPT": "REMOVED",
+        "SXP_QU_PHASE_2": "ON",
+        "SXP_AD_TARGET_REFACTOR": "CONTROL",
+        "RE_Search_Refinement_Filters": "CONTROL",
+        "MIGHTY_MONTH_2022_HOLDOUT": "MIGHTY_MONTH_ON",
+        "SXP_NEW_LANE_CLICKSTREAM": "CONTROL",
+        "SXP_REDUCED_SERVER_SIDE_RENDER": "CONTROL",
+        "SXP_DelayJS": "AFTER_LOAD",
+        "ACQ_Banner_Suppression": "CONTROL",
+        "GS_RATING_CLEANUP": "CONTROL",
+        "SXP_DEFERRED_RENDERER": "ASYNC_INITIAL_HYDRATE",
+        "SXP_STREETVIEW_REQUEST_TYPE": "CONTROL",
+        "RE_RentalsHomesForYouSort": "CONTROL",
+        "SP_FOR_RENT_PAGE": "CONTROL",
+        "Activation_NewLane_Metrics_Enabled": "DISABLED",
+        "SEOTEST__SXP_REMOVE_WHY_ZILLOW": "REMOVE_WHY_ZILLOW",
+        "Activation_Enabled": "ENABLED",
+        "DXP_RTB_LINKING": "ON",
+        "DXP_PHOTO_CAROUSEL": "CONTROL",
+        "SXP_Rentals_Apartment_Community_Filter": "TEST",
+        "DXP_HOMEPAGE_OMP_CLIENT_REFACTOR": "ON",
+        "SXP_WOW_LIST_CARD": "CONTROL",
+        "SXP_KF_FILTERS_AC": "ON",
+        "SXP_SDS_INTEGRATION": "USE_FOR_ALL",
+        "SXP_MOBILE_MAP_PRIORITY": "CONTROL",
+        "SXP_MAP_DOT_STYLE": "CONTROL",
+        "Activation_GA_Metrics_Enabled": "ENABLED",
+        "SXP_Pers_SimilarResults": "CONTROL",
+        "RE_RentalHomeDetailsService": "CONTROL",
+        "ACQ_SigninSRP_Module": "Variant_Module_A",
+        "DXP_CONST_PROPCARD_MAPVIEW": "CONTROL",
+        "SXP_FLYBAR_PSL_ZGSEARCH": "ON",
+        "ADS_Tagless": "Casale_On",
+        "SEOTEST__NC_H1": "ALTERNATE",
+        "SXP_FLYBAR_REGION_API": "CONTROL",
+        "RMX_3RD_PARTY_P1": "ON",
+        "RUM_VIA_PRE_ENDPOINT": "TREATMENT_OFF",
+        "DXP_CONST_PROPCARD_LISTVIEW": "ON",
+        "SXP_EVENT_MARKUP": "CONTROL",
+        "SXP_SEARCH_DISPATCHER_SERVICE": "CONTROL",
+        "SXP_DISPLAY_AD_LOADING": "CONTROL",
+        "SP_ZO_HDP_PAGE": "CONTROL",
+        "DESKTOP_COMMUTE_FILTER_MVP": "CONTROL",
+        "ADT_TOP_SLOT_SRP": "ONSITE_MESSAGING",
+        "VL_BDP_SSR_QUERY": "CONTROL_CACHED",
+        "VL_BDP_NEW_TAB": "CONTROL",
+        "SXP_PREXIT_CLAIMS_CHECK": "ENABLED",
+        "SEOTEST__SXP_SEO_TEST": "CONTROL",
+        "SXP_OPEN_HOUSE_FLEX": "OPEN_HOUSE_BOOSTED",
+        "SP_FOR_SALE_PAGE": "CONTROL",
+        "SXP_NO_SRPTOGGLE": "CONTROL",
+        "SXP_PAGINATION": "LEGACY_PAGINATION",
+        "SXP_KF_FILTERS_V2": "ON",
+        "SXP_MLS_NONMLS_FILTER": "CONTROL",
+        "DXP_MULTIPLE_COLLECTIONS": "ON",
+        "RE_GuidedSearchFiltersPOC": "CONTROL",
+        "SXP_3DHOME_FILTER": "ON",
+        "SP_BUILDING_PAGE": "CONTROL",
+        "SXP_QU_MIGRATION": "ON",
+        "ACQ_MOBILE_UPSELL_SXP": "CONTROL",
+        "SXP_LIST_ONLY_SRP": "CONTROL",
+        "RE_JanusBrainSort": "TEST_ALL_STATES",
+        "SEOTEST__RE_ForRentForSaleSRPBreadcrumbs": "CONTROL",
+        "SXP_MAKE_ME_MOVE": "REMOVED",
+        "SHO_GA_ResultsTotalEvent": "ON",
+        "DXP_MAP_DOTS_WEB": "ON",
+        "SXP_MULTIREGION_SEARCH": "CONTROL",
+        "DXP_HERO_SHORTENING": "ON",
+        "SXP_VISUAL_AUDIT_2021": "CONTROL",
+        "SXP_HDP_BLUE_TO_RED": "ON",
+        "HDP_DESKTOP_LAYOUT_TOPNAV": "CONTROL",
+        "SXP_HEADER_TAG_WRAPPER": "ON",
+        "DXP_HOMEPAGE_OMP": "ON",
+        "SXP_Multifamily_Filter": "MULTIFAMILY_SEPARATE",
+        "SXP_FOOTER": "RESPONSIVE_REACT",
+        "SP_PAID_BUILDER_PAGE": "CONTROL",
+        "SP_OFF_MARKET_PAGE": "CONTROL",
+        "SXP_KINGFISHER_FILTERS": "P1_PHASE_1",
+        "RE_SECOND_BOOST": "CONTROL",
+        "ADT_PROGRESSIVE_MESSAGE": "CONTROL",
+        "SXP_Combined_Filter_Apartments_Condos": "TEST",
+        "DXP_HOME_RECS": "ON",
+        "SEOTEST__SXP_REACT_FOOTER_DESKTOP": "CONTROL",
+        "SXP_3DTOUR_MAP_DOT": "ON"
+    },
+    "cat1": {
+        "searchResults": {
+            "listResults": [
+                {
+                    "zpid": "37.723972_rrc2*-rrc_122.454994",
+                    "id": "37.723972_rrc2*-rrc_122.454994",
+                    "lotId": 1001481972,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/3156e95d86fbf9e4cf4b4c3d4c419bbb-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Avalon Ocean Avenue",
+                    "detailUrl": "/b/avalon-ocean-avenue-san-francisco-ca-5XjSMb/",
+                    "latLong": {
+                        "latitude": 37.723972,
+                        "longitude": -122.454994
+                    },
+                    "units": [
+                        {
+                            "price": "$2,840+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Avalon Ocean Avenue",
+                    "isBuilding": true,
+                    "address": "1200 Ocean Ave, San Francisco, CA",
+                    "addressStreet": "1200 Ocean Ave  # 401af228e",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94112",
+                    "providerListingId": "2fa9vj1j2sd4t",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.777885_rrc2*-rrc_122.39733",
+                    "id": "37.777885_rrc2*-rrc_122.39733",
+                    "lotId": 1002208470,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/49aece0a1842c6f250ccb54d07d1f990-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Bennett Lofts",
+                    "detailUrl": "/b/bennett-lofts-san-francisco-ca-5Xrcx6/",
+                    "latLong": {
+                        "latitude": 37.777885,
+                        "longitude": -122.39733
+                    },
+                    "units": [
+                        {
+                            "price": "$2,936+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "3D_HOME",
+                        "text": "3D Tour"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Bennett Lofts",
+                    "isBuilding": true,
+                    "address": "530 Brannan St, San Francisco, CA",
+                    "addressStreet": "530 Brannan St   # 48-114",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94107",
+                    "providerListingId": "4n4jzh22kquky",
+                    "canSaveBuilding": true,
+                    "has3DModel": true,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.785732_rrc2*-rrc_122.425606",
+                    "id": "37.785732_rrc2*-rrc_122.425606",
+                    "lotId": 1001480560,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/7c043594a950288879a1e7a6018379f0-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "1333 Gough Apartments at Cathedral Hall",
+                    "detailUrl": "/b/1333-gough-apartments-at-cathedral-hall-san-francisco-ca-5XjRmn/",
+                    "latLong": {
+                        "latitude": 37.785732,
+                        "longitude": -122.425606
+                    },
+                    "units": [
+                        {
+                            "price": "$2,925+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "1333 Gough Apartments at Cathedral Hall",
+                    "isBuilding": true,
+                    "address": "1333 Gough St, San Francisco, CA",
+                    "addressStreet": "1333 Gough St   Apt 7F",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94109",
+                    "providerListingId": "4r0ychxma2hef",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.720573_rrc2*-rrc_122.475845",
+                    "id": "37.720573_rrc2*-rrc_122.475845",
+                    "lotId": 1001464986,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/c7e99252c7599b86d407f432bfd53b39-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Parkmerced",
+                    "detailUrl": "/b/parkmerced-san-francisco-ca-5XjKHx/",
+                    "latLong": {
+                        "latitude": 37.720573,
+                        "longitude": -122.475845
+                    },
+                    "units": [
+                        {
+                            "price": "$2,299+",
+                            "beds": "1"
+                        },
+                        {
+                            "price": "$2,999+",
+                            "beds": "2"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Parkmerced",
+                    "isBuilding": true,
+                    "address": "3711 19th Ave, San Francisco, CA",
+                    "addressStreet": "3711 19th Ave  # DI023",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94132",
+                    "providerListingId": "4n7x9sups7urd",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2061678397",
+                    "id": "2061678397",
+                    "providerListingId": "1mvnmz6pvg98a",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/0a9427c69dec4ed820f7f871a5fb6594-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1140-Harrison-St-138-San-Francisco-CA-94103/2061678397_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,948/mo",
+                    "unformattedPrice": 2948,
+                    "address": "Hanover Soma West, 1140 Harrison St #138, San Francisco, CA 94103",
+                    "addressStreet": "1140 Harrison St #138",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94103",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 610,
+                    "latLong": {
+                        "latitude": 37.774982,
+                        "longitude": -122.40784
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday",
+                        "data": {
+                            "isFresh": true
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2061678397,
+                            "streetAddress": "1140 Harrison St #138",
+                            "zipcode": "94103",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.774982,
+                            "longitude": -122.40784,
+                            "price": 2948.0,
+                            "datePriceChanged": 1664262000000,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 610.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "priceReduction": "$450 (Sep 27)",
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2948.0,
+                            "priceChange": -450,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 138"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2093348429",
+                    "id": "2093348429",
+                    "providerListingId": "njmhnzau6sau",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/60e7699dac9506dfceff34e658e40ba4-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1188-Mission-St-APT-2121-San-Francisco-CA-94103/2093348429_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,897/mo",
+                    "unformattedPrice": 2897,
+                    "address": "1188 Mission at Trinity Place, 1188 Mission St APT 2121, San Francisco, CA 94103",
+                    "addressStreet": "1188 Mission St APT 2121",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94103",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 571,
+                    "latLong": {
+                        "latitude": 37.77832,
+                        "longitude": -122.41281
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday",
+                        "data": {
+                            "isFresh": true
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2093348429,
+                            "streetAddress": "1188 Mission St APT 2121",
+                            "zipcode": "94103",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.77832,
+                            "longitude": -122.41281,
+                            "price": 2897.0,
+                            "datePriceChanged": 1661410800000,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 571.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "rentZestimate": 2699,
+                            "listing_sub_type": {},
+                            "priceReduction": "$124 (Aug 25)",
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2897.0,
+                            "priceChange": -124,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "Apt 2121"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": "2022-09-26 00:00:00",
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2062385768",
+                    "id": "2062385768",
+                    "providerListingId": "33kun0g1p4xqz",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/fdb9abe77eab1a8133b0070ec3c7c458-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1-Polk-St-1708-San-Francisco-CA-94102/2062385768_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,930/mo",
+                    "unformattedPrice": 2930,
+                    "address": "Argenta, 1 Polk St #1708, San Francisco, CA 94102",
+                    "addressStreet": "1 Polk St #1708",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94102",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 609,
+                    "latLong": {
+                        "latitude": 37.77679,
+                        "longitude": -122.41833
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2062385768,
+                            "streetAddress": "1 Polk St #1708",
+                            "zipcode": "94102",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.77679,
+                            "longitude": -122.41833,
+                            "price": 2930.0,
+                            "datePriceChanged": 1664002800000,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 609.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "priceReduction": "$125 (Sep 24)",
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2930.0,
+                            "priceChange": -125,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 1708"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.778404_rrc2*-rrc_122.41432",
+                    "id": "37.778404_rrc2*-rrc_122.41432",
+                    "lotId": 2082848412,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/70e133fbfdf14c4d9f8c2fe582c64e27-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "33 8th at Trinity Place",
+                    "detailUrl": "/b/33-8th-at-trinity-place-san-francisco-ca-9NJw4S/",
+                    "latLong": {
+                        "latitude": 37.778404,
+                        "longitude": -122.41432
+                    },
+                    "units": [
+                        {
+                            "price": "$2,549+",
+                            "beds": "1"
+                        },
+                        {
+                            "price": "$2,849+",
+                            "beds": "2"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "33 8th at Trinity Place",
+                    "isBuilding": true,
+                    "address": "33 8th St, San Francisco, CA",
+                    "addressStreet": "33 8th St   Apt 1112",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94103",
+                    "providerListingId": "4fgbxxwr0e8d",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.781723_rrc2*-rrc_122.41131",
+                    "id": "37.781723_rrc2*-rrc_122.41131",
+                    "lotId": 2082834949,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/2d8fbd35f152ca9b15625b2c58aa273d-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Prism",
+                    "detailUrl": "/b/prism-san-francisco-ca-9NJpRh/",
+                    "latLong": {
+                        "latitude": 37.781723,
+                        "longitude": -122.41131
+                    },
+                    "units": [
+                        {
+                            "price": "$2,805+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "3D_HOME",
+                        "text": "3D Tour"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Prism",
+                    "isBuilding": true,
+                    "address": "1028 Market St, San Francisco, CA",
+                    "addressStreet": "1028 Market St   # 702",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94102",
+                    "providerListingId": "4p6tj1qfkax9s",
+                    "canSaveBuilding": true,
+                    "has3DModel": true,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2062591826",
+                    "id": "2062591826",
+                    "providerListingId": "8mynqxjcz1vn",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/b0e4041245356ae0d77c7d60a319806a-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/2823-18th-St-409-San-Francisco-CA-94110/2062591826_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,971/mo",
+                    "unformattedPrice": 2971,
+                    "address": "The Madelon, 2823 18th St #409, San Francisco, CA 94110",
+                    "addressStreet": "2823 18th St #409",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94110",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 435,
+                    "latLong": {
+                        "latitude": 37.761726,
+                        "longitude": -122.41059
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2062591826,
+                            "streetAddress": "2823 18th St #409",
+                            "zipcode": "94110",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.761726,
+                            "longitude": -122.41059,
+                            "price": 2971.0,
+                            "datePriceChanged": 1663743600000,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 435.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2971.0,
+                            "priceChange": 75,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 409"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2104934304",
+                    "id": "2104934304",
+                    "providerListingId": "4nfpdrjf4d18s",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/a7a35ac6021cb1c42729d3c35c70a8a2-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/2211-Stockton-St-1492387-San-Francisco-CA-94133/2104934304_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,810+/mo",
+                    "unformattedPrice": 2810,
+                    "address": "NorthPoint Apartments, 2211 Stockton St, San Francisco, CA 94133",
+                    "addressStreet": "2211 Stockton St #1492387",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94133",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 589,
+                    "latLong": {
+                        "latitude": 37.806435,
+                        "longitude": -122.41087
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday",
+                        "data": {
+                            "isFresh": true
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2104934304,
+                            "streetAddress": "2211 Stockton St #1492387",
+                            "zipcode": "94133",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.806435,
+                            "longitude": -122.41087,
+                            "price": 2810.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 589.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "rentZestimate": 3339,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2810.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 1492387"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.805683_rrc2*-rrc_122.410675",
+                    "id": "37.805683_rrc2*-rrc_122.410675",
+                    "lotId": 1001427686,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/5eabb7d62743e251efccf657cf564c59-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "2133 Stockton Street Apartments",
+                    "detailUrl": "/b/2133-stockton-street-apartments-san-francisco-ca-5Xhzkj/",
+                    "latLong": {
+                        "latitude": 37.805683,
+                        "longitude": -122.410675
+                    },
+                    "units": [
+                        {
+                            "price": "$2,599+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "2133 Stockton Street Apartments",
+                    "isBuilding": true,
+                    "address": "2133 Stockton St, San Francisco, CA",
+                    "addressStreet": "2133 Stockton St   Apt C305",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94133",
+                    "providerListingId": "4kefu7w2p48mu",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.777924_rrc2*-rrc_122.41301",
+                    "id": "37.777924_rrc2*-rrc_122.41301",
+                    "lotId": 1001488048,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/6ff95dd0add427cae15ea4dc5fcc1060-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "1190 Mission at Trinity Place",
+                    "detailUrl": "/b/1190-mission-at-trinity-place-san-francisco-ca-5XjVtb/",
+                    "latLong": {
+                        "latitude": 37.777924,
+                        "longitude": -122.41301
+                    },
+                    "units": [
+                        {
+                            "price": "$2,519+",
+                            "beds": "1"
+                        },
+                        {
+                            "price": "$2,699+",
+                            "beds": "2"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "1190 Mission at Trinity Place",
+                    "isBuilding": true,
+                    "address": "1190 Mission St, San Francisco, CA",
+                    "addressStreet": "1190 Mission St   Apt 1801",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94103",
+                    "providerListingId": "17um590ukckkp",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.72495_rrc2*-rrc_122.3947",
+                    "id": "37.72495_rrc2*-rrc_122.3947",
+                    "lotId": 2083056750,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/c6c2c1a1bba251e4102f0d9cfba5a8a1-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Waterbend",
+                    "detailUrl": "/b/waterbend-san-francisco-ca-9NLgqG/",
+                    "latLong": {
+                        "latitude": 37.72495,
+                        "longitude": -122.3947
+                    },
+                    "units": [
+                        {
+                            "price": "$2,904+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Waterbend",
+                    "isBuilding": true,
+                    "address": "5880 3rd St, San Francisco, CA",
+                    "addressStreet": "5880 3rd St   Apt 312",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94124",
+                    "providerListingId": "2h430kbwfm1y8",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.786358_rrc2*-rrc_122.413826",
+                    "id": "37.786358_rrc2*-rrc_122.413826",
+                    "lotId": 1001479818,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/0d0d65774ed8263e836d4864cd7ec84f-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Geary Courtyard",
+                    "detailUrl": "/b/geary-courtyard-san-francisco-ca-5XjRSd/",
+                    "latLong": {
+                        "latitude": 37.786358,
+                        "longitude": -122.413826
+                    },
+                    "units": [
+                        {
+                            "price": "$2,479+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Geary Courtyard",
+                    "isBuilding": true,
+                    "address": "639 Geary St, San Francisco, CA",
+                    "addressStreet": "639 Geary St   # 1610",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94102",
+                    "providerListingId": "4ar2gq120zb4j",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2061465386",
+                    "id": "2061465386",
+                    "providerListingId": "510hg73b8tv5k",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/23dcf0799e9548f523f6964a0f5ebd86-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/845-Sutter-St-APT-103-San-Francisco-CA-94109/2061465386_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,850/mo",
+                    "unformattedPrice": 2850,
+                    "address": "845 Sutter, 845 Sutter St APT 103, San Francisco, CA 94109",
+                    "addressStreet": "845 Sutter St APT 103",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94109",
+                    "isUndisclosedAddress": false,
+                    "beds": 2,
+                    "baths": 1.5,
+                    "area": 800,
+                    "latLong": {
+                        "latitude": 37.788227,
+                        "longitude": -122.414185
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2061465386,
+                            "streetAddress": "845 Sutter St APT 103",
+                            "zipcode": "94109",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.788227,
+                            "longitude": -122.414185,
+                            "price": 2850.0,
+                            "bathrooms": 1.5,
+                            "bedrooms": 2.0,
+                            "livingArea": 800.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2850.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "Apt 103"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": "2022-09-22 00:00:00",
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.77907_rrc2*-rrc_122.41385",
+                    "id": "37.77907_rrc2*-rrc_122.41385",
+                    "lotId": 2367793298,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/106d4fb6682882352f1207a241724e6a-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "1177 Market at Trinity Place",
+                    "detailUrl": "/b/1177-market-at-trinity-place-san-francisco-ca-BNjvdD/",
+                    "latLong": {
+                        "latitude": 37.77907,
+                        "longitude": -122.41385
+                    },
+                    "units": [
+                        {
+                            "price": "$2,625+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "1177 Market at Trinity Place",
+                    "isBuilding": true,
+                    "address": "1177 Market St, San Francisco, CA",
+                    "addressStreet": "1177 Market St   # 1506",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94103",
+                    "providerListingId": "3jcen8mm932es",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.76245_rrc2*-rrc_122.48575",
+                    "id": "37.76245_rrc2*-rrc_122.48575",
+                    "lotId": 1001467483,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/94a40e861d9646d40f82b86a71379a50-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Avalon Sunset Towers",
+                    "detailUrl": "/b/avalon-sunset-towers-san-francisco-ca-5XjLKv/",
+                    "latLong": {
+                        "latitude": 37.76245,
+                        "longitude": -122.48575
+                    },
+                    "units": [
+                        {
+                            "price": "$2,904+",
+                            "beds": "1"
+                        },
+                        {
+                            "price": "$2,300+",
+                            "beds": "2"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Avalon Sunset Towers",
+                    "isBuilding": true,
+                    "address": "8 Locksley Ave, San Francisco, CA",
+                    "addressStreet": "8 Locksley Ave  # 1c7ac8e9e",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94131",
+                    "providerListingId": "3mxbrv1z66sms",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2061725285",
+                    "id": "2061725285",
+                    "providerListingId": "2t7kye66y7z06",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/1f1de8c554b3ffea7a3c00f338f74ff8-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/775-Geary-St-APT-401-San-Francisco-CA-94109/2061725285_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,645/mo",
+                    "unformattedPrice": 2645,
+                    "address": "775 Geary St, 775 Geary St APT 401, San Francisco, CA 94109",
+                    "addressStreet": "775 Geary St APT 401",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94109",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 780,
+                    "latLong": {
+                        "latitude": 37.78616,
+                        "longitude": -122.41602
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2061725285,
+                            "streetAddress": "775 Geary St APT 401",
+                            "zipcode": "94109",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.78616,
+                            "longitude": -122.41602,
+                            "price": 2645.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 780.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2645.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "Apt 401"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.78353_rrc2*-rrc_122.42049",
+                    "id": "37.78353_rrc2*-rrc_122.42049",
+                    "lotId": 1004243128,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/42f857ac43706973c0dd2c2c9643072d-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "840 Van Ness",
+                    "detailUrl": "/b/840-van-ness-san-francisco-ca-5YCwMj/",
+                    "latLong": {
+                        "latitude": 37.78353,
+                        "longitude": -122.42049
+                    },
+                    "units": [
+                        {
+                            "price": "$2,095+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "840 Van Ness",
+                    "isBuilding": true,
+                    "address": "840 Van Ness Ave, San Francisco, CA",
+                    "addressStreet": "840 Van Ness Ave  Apt 503",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94109",
+                    "providerListingId": "qe1dpp6c5env",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.78529_rrc2*-rrc_122.43424",
+                    "id": "37.78529_rrc2*-rrc_122.43424",
+                    "lotId": 2082958117,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/fec59cd7e040c3113e87424552c985d9-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "1964 Post",
+                    "detailUrl": "/b/1964-post-san-francisco-ca-9NKrkL/",
+                    "latLong": {
+                        "latitude": 37.78529,
+                        "longitude": -122.43424
+                    },
+                    "units": [
+                        {
+                            "price": "$2,795+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "3D_HOME",
+                        "text": "3D Tour"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "1964 Post",
+                    "isBuilding": true,
+                    "address": "1964 Post St, San Francisco, CA",
+                    "addressStreet": "1964 Post St   # 11",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94115",
+                    "providerListingId": "5cht5fkd0xs1",
+                    "canSaveBuilding": true,
+                    "has3DModel": true,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2062493197",
+                    "id": "2062493197",
+                    "providerListingId": "38nnay925h92",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/2a9cb5c57cc7cdb66bb4cb78a90854e8-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1755-Van-Ness-Ave-308-San-Francisco-CA-94109/2062493197_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,900/mo",
+                    "unformattedPrice": 2900,
+                    "address": "1755 Van Ness Ave, 1755 Van Ness Ave #308, San Francisco, CA 94109",
+                    "addressStreet": "1755 Van Ness Ave #308",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94109",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": null,
+                    "latLong": {
+                        "latitude": 37.791924,
+                        "longitude": -122.423065
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2062493197,
+                            "streetAddress": "1755 Van Ness Ave #308",
+                            "zipcode": "94109",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.791924,
+                            "longitude": -122.423065,
+                            "price": 2900.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2900.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 308"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.78556_rrc2*-rrc_122.4194",
+                    "id": "37.78556_rrc2*-rrc_122.4194",
+                    "lotId": 1001475447,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/3948b2318db1f35e82f83a9ff75f1471-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Trinity Towers Apartments",
+                    "detailUrl": "/b/trinity-towers-apartments-san-francisco-ca-5XjPdR/",
+                    "latLong": {
+                        "latitude": 37.78556,
+                        "longitude": -122.4194
+                    },
+                    "units": [
+                        {
+                            "price": "$2,249+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Trinity Towers Apartments",
+                    "isBuilding": true,
+                    "address": "888 Ofarrell St, San Francisco, CA",
+                    "addressStreet": "888 Ofarrell St   # W0909",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94109",
+                    "providerListingId": "32brayt5f160q",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.785282_rrc2*-rrc_122.41479",
+                    "id": "37.785282_rrc2*-rrc_122.41479",
+                    "lotId": 1001470106,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/9400e9912a94b18a67354c876450117d-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "601 O'Farrell",
+                    "detailUrl": "/b/601-o%27farrell-san-francisco-ca-5XjMQR/",
+                    "latLong": {
+                        "latitude": 37.785282,
+                        "longitude": -122.41479
+                    },
+                    "units": [
+                        {
+                            "price": "$2,395+",
+                            "beds": "1"
+                        },
+                        {
+                            "price": "$2,895+",
+                            "beds": "2"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "601 O'Farrell",
+                    "isBuilding": true,
+                    "address": "601 Ofarrell St, San Francisco, CA",
+                    "addressStreet": "601 Ofarrell St   Apt 214",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94109",
+                    "providerListingId": "h7ehb2nbtvw5",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.71773_rrc2*-rrc_122.44059",
+                    "id": "37.71773_rrc2*-rrc_122.44059",
+                    "lotId": 2349084167,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/a3fdf44d03d03ca70bad126a8f3637af-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "ChesHill on Mission",
+                    "detailUrl": "/b/cheshill-on-mission-san-francisco-ca-BKTtQD/",
+                    "latLong": {
+                        "latitude": 37.71773,
+                        "longitude": -122.44059
+                    },
+                    "units": [
+                        {
+                            "price": "$2,995+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "ChesHill on Mission",
+                    "isBuilding": true,
+                    "address": "33 Seneca Ave, San Francisco, CA",
+                    "addressStreet": "33 Seneca Ave  # c50415fb6",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94112",
+                    "providerListingId": "3vxh34fdxvndp",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2063289815",
+                    "id": "2063289815",
+                    "providerListingId": "3w3fnnxfxp8s1",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/7c8c6073fe3fc292283e009b418e085c-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1690-Broadway-67C93E3D7-San-Francisco-CA-94123/2063289815_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$3,000+/mo",
+                    "unformattedPrice": 3000,
+                    "address": "Grosvenor Atrium, 1690 Broadway, San Francisco, CA 94123",
+                    "addressStreet": "1690 Broadway #67C93E3D7",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94123",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": null,
+                    "latLong": {
+                        "latitude": 37.79587,
+                        "longitude": -122.42479
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday",
+                        "data": {
+                            "isFresh": true
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2063289815,
+                            "streetAddress": "1690 Broadway #67C93E3D7",
+                            "zipcode": "94123",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.79587,
+                            "longitude": -122.42479,
+                            "price": 3000.0,
+                            "datePriceChanged": 1660719600000,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 3000.0,
+                            "priceChange": 205,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 67c93e3d7"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2068114103",
+                    "id": "2068114103",
+                    "providerListingId": "4qjf8utper3g0",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/0c7a62b533736b771ac275735ecd81a2-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/750-Ofarrell-St-410-San-Francisco-CA-94109/2068114103_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,245/mo",
+                    "unformattedPrice": 2245,
+                    "address": "750 O'Farrell St, 750 Ofarrell St #410, San Francisco, CA 94109",
+                    "addressStreet": "750 Ofarrell St #410",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94109",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 710,
+                    "latLong": {
+                        "latitude": 37.785538,
+                        "longitude": -122.41725
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2068114103,
+                            "streetAddress": "750 Ofarrell St #410",
+                            "zipcode": "94109",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.785538,
+                            "longitude": -122.41725,
+                            "price": 2245.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 710.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "rentZestimate": 2749,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2245.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 410"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2064233188",
+                    "id": "2064233188",
+                    "providerListingId": "tgz50wshjsug",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/d2e06de3cc4db21222c9b752c5a85a79-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1521-Taylor-St-4-San-Francisco-CA-94133/2064233188_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,750/mo",
+                    "unformattedPrice": 2750,
+                    "address": "1521 Taylor St., 1521 Taylor St #4, San Francisco, CA 94133",
+                    "addressStreet": "1521 Taylor St #4",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94133",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 525,
+                    "latLong": {
+                        "latitude": 37.79639,
+                        "longitude": -122.41365
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2064233188,
+                            "streetAddress": "1521 Taylor St #4",
+                            "zipcode": "94133",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.79639,
+                            "longitude": -122.41365,
+                            "price": 2750.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 525.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2750.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 4"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.783566_rrc2*-rrc_122.397865",
+                    "id": "37.783566_rrc2*-rrc_122.397865",
+                    "lotId": 1001429652,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/a30606db10ab9b05bfedc5896a2edec8-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "SoMa Square",
+                    "detailUrl": "/b/soma-square-san-francisco-ca-5Xj2Yr/",
+                    "latLong": {
+                        "latitude": 37.783566,
+                        "longitude": -122.397865
+                    },
+                    "units": [
+                        {
+                            "price": "$2,766+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "3D_HOME",
+                        "text": "3D Tour"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "SoMa Square",
+                    "isBuilding": true,
+                    "address": "1 Saint Francis Pl, San Francisco, CA",
+                    "addressStreet": "1 Saint Francis Pl   Apt 1303",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94107",
+                    "providerListingId": "1d9jtfphzmvsh",
+                    "canSaveBuilding": true,
+                    "has3DModel": true,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.75853_rrc2*-rrc_122.462425",
+                    "id": "37.75853_rrc2*-rrc_122.462425",
+                    "lotId": 1001486950,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/4f93d2a2df06d8fdabab4ffc829ecd1e-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "Mt. Sutro",
+                    "detailUrl": "/b/mt.-sutro-san-francisco-ca-5XjVRC/",
+                    "latLong": {
+                        "latitude": 37.75853,
+                        "longitude": -122.462425
+                    },
+                    "units": [
+                        {
+                            "price": "$2,750+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "Mt. Sutro",
+                    "isBuilding": true,
+                    "address": "480 Warren Dr, San Francisco, CA",
+                    "addressStreet": "480 Warren Dr   # 70df9b83a",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94131",
+                    "providerListingId": "4jgwrq60rx7k6",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2104934306",
+                    "id": "2104934306",
+                    "providerListingId": "1461w4gcccc1",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/9efd08f6104723857487ad8b15937e43-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/2351-Powell-St-762018-San-Francisco-CA-94133/2104934306_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$3,000+/mo",
+                    "unformattedPrice": 3000,
+                    "address": "NorthPoint Vistas, 2351 Powell St, San Francisco, CA 94133",
+                    "addressStreet": "2351 Powell St #762018",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94133",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 835,
+                    "latLong": {
+                        "latitude": 37.80619,
+                        "longitude": -122.41287
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2104934306,
+                            "streetAddress": "2351 Powell St #762018",
+                            "zipcode": "94133",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.80619,
+                            "longitude": -122.41287,
+                            "price": 3000.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 835.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "rentZestimate": 3696,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 3000.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 762018"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2063403377",
+                    "id": "2063403377",
+                    "providerListingId": "7n5kvz3371rg",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/e9ab31d83428955d3fb58d943484a8bd-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/2055-Sacramento-St-D84172E8A-San-Francisco-CA-94109/2063403377_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,650+/mo",
+                    "unformattedPrice": 2650,
+                    "address": "Grosvenor Court, 2055 Sacramento St, San Francisco, CA 94109",
+                    "addressStreet": "2055 Sacramento St #D84172E8A",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94109",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 612,
+                    "latLong": {
+                        "latitude": 37.790485,
+                        "longitude": -122.42664
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2063403377,
+                            "streetAddress": "2055 Sacramento St #D84172E8A",
+                            "zipcode": "94109",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.790485,
+                            "longitude": -122.42664,
+                            "price": 2650.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 612.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2650.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# d84172e8a"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.78555_rrc2*-rrc_122.41409",
+                    "id": "37.78555_rrc2*-rrc_122.41409",
+                    "lotId": 1049453284,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/04b2a2d678adac3bad7f2dee0890925f-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "575 O'Farrell St",
+                    "detailUrl": "/b/575-o%27farrell-st-san-francisco-ca-5j4D5y/",
+                    "latLong": {
+                        "latitude": 37.78555,
+                        "longitude": -122.41409
+                    },
+                    "units": [
+                        {
+                            "price": "$2,095+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "575 O'Farrell St",
+                    "isBuilding": true,
+                    "address": "575 Ofarrell St, San Francisco, CA",
+                    "addressStreet": "575 Ofarrell St   Apt 502",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94102",
+                    "providerListingId": "349atpyjw4req",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.785236_rrc2*-rrc_122.43544",
+                    "id": "37.785236_rrc2*-rrc_122.43544",
+                    "lotId": 1001479629,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/ef43f1789d85a0c414bcb0ee7317d726-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "2000 Post",
+                    "detailUrl": "/b/2000-post-san-francisco-ca-5XjRNn/",
+                    "latLong": {
+                        "latitude": 37.785236,
+                        "longitude": -122.43544
+                    },
+                    "units": [
+                        {
+                            "price": "$2,678+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "2000 Post",
+                    "isBuilding": true,
+                    "address": "2000 Post St, San Francisco, CA",
+                    "addressStreet": "2000 Post St # 211",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94115",
+                    "providerListingId": "e5jk50kcsm2q",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2063092087",
+                    "id": "2063092087",
+                    "providerListingId": "3dfavjubgcgc2",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/fa7c432ff07c2ffc7be3329c31758c63-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1845-Cabrillo-St-6C17C257D-San-Francisco-CA-94121/2063092087_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,700+/mo",
+                    "unformattedPrice": 2700,
+                    "address": "1845 Cabrillo, 1845 Cabrillo St, San Francisco, CA 94121",
+                    "addressStreet": "1845 Cabrillo St #6C17C257D",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94121",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 750,
+                    "latLong": {
+                        "latitude": 37.774418,
+                        "longitude": -122.478676
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2063092087,
+                            "streetAddress": "1845 Cabrillo St #6C17C257D",
+                            "zipcode": "94121",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.774418,
+                            "longitude": -122.478676,
+                            "price": 2700.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 750.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2700.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 6c17c257d"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2062771623",
+                    "id": "2062771623",
+                    "providerListingId": "1fcd4b0n8rv9h",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/97c2f9a844ed944211298a2e6fcb0cb0-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/50-Golden-Gate-Ave-APT-504-San-Francisco-CA-94102/2062771623_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$1,995/mo",
+                    "unformattedPrice": 1995,
+                    "address": "50 Golden Gate Ave., 50 Golden Gate Ave APT 504, San Francisco, CA 94102",
+                    "addressStreet": "50 Golden Gate Ave APT 504",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94102",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": 453,
+                    "latLong": {
+                        "latitude": 37.782448,
+                        "longitude": -122.41153
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "106 days ago",
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2062771623,
+                            "streetAddress": "50 Golden Gate Ave APT 504",
+                            "zipcode": "94102",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.782448,
+                            "longitude": -122.41153,
+                            "price": 1995.0,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 453.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 1995.0,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "Apt 504"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.786186_rrc2*-rrc_122.41949",
+                    "id": "37.786186_rrc2*-rrc_122.41949",
+                    "lotId": 1001482267,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/204e67d719566e290f4ef67152d0822a-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "990 Geary",
+                    "detailUrl": "/b/990-geary-san-francisco-ca-5XjSTc/",
+                    "latLong": {
+                        "latitude": 37.786186,
+                        "longitude": -122.41949
+                    },
+                    "units": [
+                        {
+                            "price": "$2,200+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": "Updated yesterday"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "990 Geary",
+                    "isBuilding": true,
+                    "address": "990 Geary St, San Francisco, CA",
+                    "addressStreet": "990 Geary St   Apt 505",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94109",
+                    "providerListingId": "b5bu6z6xt89b",
+                    "canSaveBuilding": true,
+                    "has3DModel": false,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "37.78854_rrc2*-rrc_122.416176",
+                    "id": "37.78854_rrc2*-rrc_122.416176",
+                    "lotId": 1001539566,
+                    "imgSrc": "https://photos.zillowstatic.com/fp/10eb73f665a03e87dccb95d7f841eb57-p_e.jpg",
+                    "hasImage": true,
+                    "statusType": "FOR_RENT",
+                    "statusText": "952 Sutter St.",
+                    "detailUrl": "/b/952-sutter-st.-san-francisco-ca-5XjxLz/",
+                    "latLong": {
+                        "latitude": 37.78854,
+                        "longitude": -122.416176
+                    },
+                    "units": [
+                        {
+                            "price": "$2,450+",
+                            "beds": "1"
+                        }
+                    ],
+                    "variableData": {
+                        "type": "3D_HOME",
+                        "text": "3D Tour"
+                    },
+                    "badgeInfo": null,
+                    "buildingName": "952 Sutter St.",
+                    "isBuilding": true,
+                    "address": "952 Sutter St, San Francisco, CA",
+                    "addressStreet": "952 Sutter St   Apt 306",
+                    "addressState": "CA",
+                    "addressCity": "San Francisco",
+                    "addressZipcode": "94109",
+                    "providerListingId": "hmp86nh3wwwe",
+                    "canSaveBuilding": true,
+                    "has3DModel": true,
+                    "isFeaturedListing": true,
+                    "isSaved": false,
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2061640339",
+                    "id": "2061640339",
+                    "providerListingId": "1g7kgnrxwh3u3",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/5c5529b2f7d5220bd75bb865947acce5-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/1525-Clay-St-7-San-Francisco-CA-94109/2061640339_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,450/mo",
+                    "unformattedPrice": 2450,
+                    "address": "1525 Clay, 1525 Clay St #7, San Francisco, CA 94109",
+                    "addressStreet": "1525 Clay St #7",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94109",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 0.0,
+                    "area": 450,
+                    "latLong": {
+                        "latitude": 37.79258,
+                        "longitude": -122.41818
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2061640339,
+                            "streetAddress": "1525 Clay St #7",
+                            "zipcode": "94109",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.79258,
+                            "longitude": -122.41818,
+                            "price": 2450.0,
+                            "datePriceChanged": 1664348400000,
+                            "bathrooms": 0.0,
+                            "bedrooms": 1.0,
+                            "livingArea": 450.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2450.0,
+                            "priceChange": 155,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 7"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": "2022-09-07 00:00:00",
+                    "list": true,
+                    "relaxed": false
+                },
+                {
+                    "zpid": "2066697538",
+                    "id": "2066697538",
+                    "providerListingId": "4x7e4rrbh7qyb",
+                    "imgSrc": "https://photos.zillowstatic.com/fp/19e6d47baefc56fa2dfd097e653cc7ce-p_e.jpg",
+                    "hasImage": true,
+                    "detailUrl": "https://www.zillow.com/homedetails/168-Bluxome-St-6A4CEDE12-San-Francisco-CA-94107/2066697538_zpid/",
+                    "statusType": "FOR_RENT",
+                    "statusText": "Apartment for rent",
+                    "countryCurrency": "$",
+                    "price": "$2,800+/mo",
+                    "unformattedPrice": 2800,
+                    "address": "Loft 168, 168 Bluxome St, San Francisco, CA 94107",
+                    "addressStreet": "168 Bluxome St #6A4CEDE12",
+                    "addressCity": "San Francisco",
+                    "addressState": "CA",
+                    "addressZipcode": "94107",
+                    "isUndisclosedAddress": false,
+                    "beds": 1,
+                    "baths": 1.0,
+                    "area": null,
+                    "latLong": {
+                        "latitude": 37.774837,
+                        "longitude": -122.39982
+                    },
+                    "isZillowOwned": false,
+                    "variableData": {
+                        "type": "TIME_ON_INFO",
+                        "text": null,
+                        "data": {
+                            "isFresh": false
+                        }
+                    },
+                    "badgeInfo": null,
+                    "hdpData": {
+                        "homeInfo": {
+                            "zpid": 2066697538,
+                            "streetAddress": "168 Bluxome St #6A4CEDE12",
+                            "zipcode": "94107",
+                            "city": "San Francisco",
+                            "state": "CA",
+                            "latitude": 37.774837,
+                            "longitude": -122.39982,
+                            "price": 2800.0,
+                            "datePriceChanged": 1655103600000,
+                            "bathrooms": 1.0,
+                            "bedrooms": 1.0,
+                            "homeType": "APARTMENT",
+                            "homeStatus": "FOR_RENT",
+                            "daysOnZillow": -1,
+                            "isFeatured": true,
+                            "shouldHighlight": false,
+                            "isRentalWithBasePrice": false,
+                            "listing_sub_type": {},
+                            "isUnmappable": false,
+                            "isPreforeclosureAuction": false,
+                            "homeStatusForHDP": "FOR_RENT",
+                            "priceForHDP": 2800.0,
+                            "priceChange": 200,
+                            "isNonOwnerOccupied": true,
+                            "isPremierBuilder": false,
+                            "isZillowOwned": false,
+                            "currency": "USD",
+                            "country": "USA",
+                            "unit": "# 6a4cede12"
+                        }
+                    },
+                    "isSaved": false,
+                    "isUserClaimingOwner": false,
+                    "isUserConfirmedClaim": false,
+                    "pgapt": "ForRent",
+                    "sgapt": "For Rent",
+                    "zestimate": null,
+                    "shouldShowZestimateAsPrice": false,
+                    "has3DModel": false,
+                    "hasVideo": false,
+                    "isHomeRec": false,
+                    "hasAdditionalAttributions": false,
+                    "isFeaturedListing": true,
+                    "availabilityDate": null,
+                    "list": true,
+                    "relaxed": false
+                }
+            ],
+            "resultsHash": "4158904a",
+            "homeRecCount": 0,
+            "showForYouCount": 0,
+            "relaxedResults": [],
+            "relaxedResultsHash": "1"
+        },
+        "searchList": {
+            "expansionDistance": 0,
+            "zeroResultsFilters": null,
+            "pagination": {
+                "nextUrl": "/homes/for_rent/2_p/"
+            },
+            "message": null,
+            "adsConfig": {
+                "navAdSlot": "zillow/search_results_1/rent_general/search_1",
+                "displayAdSlot": "zillow/search_results_1/rent_general/b_right_p1",
+                "targets": {
+                    "mlat": "37.77524527531075",
+                    "bd": "1,2,3,4,5,6,7,8,9,10",
+                    "zusr": "true",
+                    "city": "San_Francisco",
+                    "vers": "constellation,srp_control",
+                    "listtp": "rent_general",
+                    "searchtp": "unknown",
+                    "filtered": "true",
+                    "premieragent": "no",
+                    "dma": "37",
+                    "guid": "07fa6652-a667-4101-8462-2eb9fb896d8d",
+                    "state": "CA",
+                    "mlong": "-122.433329",
+                    "cnty": "San_Francisco",
+                    "prange": "1750-1999,1500-1749,3000-3499,1250-1499,0-499,1000-1249,2500-2999,750-999,500-749,2000-2499"
+                },
+                "needsUpdate": true
+            },
+            "totalResultCount": 557,
+            "resultsPerPage": 40,
+            "totalPages": 14,
+            "listResultsTitle": "Rental Listings",
+            "resultContexts": null,
+            "pageRules": "PropertySearchLookupResponseRules(isAdsRestricted=false, lowestLimitSearchResultsCount=null)",
+            "listTopSlotOnsiteMessage": {
+                "messages": [
+                    {
+                        "bucket": "PORTFOLIO_INTEGRATION_CTRL",
+                        "lastModified": 1663320585,
+                        "passThrottle": true,
+                        "placementId": 642,
+                        "placementName": "SRPTopSlot",
+                        "qualifiedTreatments": [],
+                        "testPhase": "portfolioIntegration",
+                        "decisionContext": {
+                            "guid": "07fa6652-a667-4101-8462-2eb9fb896d8d",
+                            "isMobileWeb": false,
+                            "srpSearchType": "ForRent"
+                        },
+                        "eventId": "d510b247-efbc-4900-866e-3b3039e7196e",
+                        "isGlobalHoldout": false,
+                        "isPlacementHoldout": false,
+                        "shouldDisplay": true
+                    }
+                ]
+            },
+            "gdpUrl": "https://www.zillow.com/graphql/"
+        }
+    },
+    "categoryTotals": {
+        "cat1": {
+            "totalResultCount": 557
+        },
+        "cat2": {
+            "totalResultCount": 0
+        }
+    },
+    "autocompleteConfig": {
+        "address": {
+            "enabled": true,
+            "url": "https://aac.zillowstatic.com"
+        },
+        "region": {
+            "enabled": true,
+            "url": "https://ac.zillowstatic.com/",
+            "truliaUrl": "https://www.zillowstatic.com/autocomplete/v2/"
+        },
+        "regionAddress": {
+            "enabled": true,
+            "url": "https://www.zillowstatic.com/autocomplete/v3/"
+        },
+        "recentSearchLocalStorageKey": "recentSearchesEnhanced",
+        "centroid": {
+            "lat": 37.164051,
+            "lon": -96.8510195
+        },
+        "initSearchTerm": "San Francisco, CA",
+        "shouldShowSavedHomes": false,
+        "shouldShowSavedSearches": false,
+        "abKey": "07fa6652-a667-4101-8462-2eb9fb896d8d",
+        "clientId": "static-search-page"
+    },
+    "isZillowOwnedDeprecated": true
+}
